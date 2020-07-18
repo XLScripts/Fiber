@@ -1,4 +1,12 @@
-import Fiber from "./fiber";
-import App from "./components/App.jsx";
+import Fiber, { render } from "./fiber";
+import "./css/global.css";
 
-Fiber.render(<App />, document.getElementById('root'));
+import Counter from "./src/components/Counter.jsx";
+
+const App = () => (
+    <div id="main">
+        <Counter />
+    </div>
+)
+
+render(<App />, document.getElementById('root'));

@@ -13,7 +13,7 @@ module.exports = {
     },
     entry: resolve(AppDir, "index.js"),
     target: "web",
-    mode: process.env.WEBPACK_SERVE ? "development" : "production",
+    mode: process.env.WEBPACK_DEV_SERVER ? "development" : "production",
     devtool: "source-map",
     output: {
         path: DistDir,
@@ -68,13 +68,6 @@ module.exports = {
             chunks: ['main'],
             scriptLoading: 'defer',
             inject: 'head'
-        }),
-        /* new CopyWebpackPlugin({
-            patterns: [
-                { from: resolve(AppDir, 'manifest.json') },
-                { from: resolve(AppDir, 'assets'), to: './assets' },
-                { from: resolve(AppDir, 'public'), to: './app' }
-            ]
-        }) */
+        })
     ]
 };

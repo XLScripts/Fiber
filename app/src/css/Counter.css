@@ -1,0 +1,16 @@
+#counter {
+    padding: 20px 30px;
+    border-radius: 4px;
+    background: white;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#counter .title {
+    letter-spacing: 2px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: rgb(29, 29, 29)
+}
